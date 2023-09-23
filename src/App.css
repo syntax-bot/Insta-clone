@@ -1,0 +1,19 @@
+*{
+  margin:0;
+ padding: 0;
+}
+
+.app{
+  display: flex;
+  height: 100vh;
+}
+
+ a{
+  text-decoration: none;
+ }
+
+@media (max-width: 600px){
+  .app{
+   flex-direction: column;
+  }
+}

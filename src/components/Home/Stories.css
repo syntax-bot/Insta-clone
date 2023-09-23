@@ -1,0 +1,28 @@
+.Stories{
+    
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgb(94, 94, 94);
+    width: 100%;
+
+}
+
+.Stories_stack{
+    overflow-x: scroll;
+}
+
+.Stories_stack::-webkit-scrollbar {
+    
+    height: 0.2em
+}
+
+.Stories_stack::-webkit-scrollbar-button {
+    background:grey
+}
+.Stories_stack::-webkit-scrollbar-track-piece {
+    background:transparent
+}
+
+.Stories_stack::-webkit-scrollbar-thumb {
+    background:grey;
+}

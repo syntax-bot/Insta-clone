@@ -1,0 +1,27 @@
+.Post{
+    width: 510px;
+    background-color: bisque;
+    border-bottom: 0.5px solid rgb(92, 92, 92);
+    min-height: fit-content;
+    margin-bottom: 20px;
+}
+
+.comment_Button{
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    padding: 10px;
+    color: grey;
+}
+
+.Show_Comments{
+    display: none;
+}
+
+@media (max-width:600px) {
+    .Post{
+        width: 100%;
+        min-height: fit-content;
+    }
+    
+}
