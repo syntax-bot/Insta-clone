@@ -1,0 +1,8 @@
+
+.Profile_Post{
+    width: 510px;
+    background-color: bisque;
+    border-bottom: 0.5px solid rgb(92, 92, 92);
+    min-height: fit-content;
+    margin-bottom: 20px;
+}

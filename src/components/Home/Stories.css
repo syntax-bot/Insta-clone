@@ -6,6 +6,26 @@
     width: 100%;
 
 }
+.story{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 1;
+    backdrop-filter:blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.story_hide{
+    display: none;
+}
+.story .clear_btn{
+    position: fixed;
+    top:0;
+    background-color: rgb(193, 113, 8);
+}
 
 .Stories_stack{
     overflow-x: scroll;

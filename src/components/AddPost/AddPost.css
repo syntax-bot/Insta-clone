@@ -1,0 +1,25 @@
+.AddPost{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.AddPost fieldset{
+    width: 80%;
+    height: 10%;
+}
+.AddPost fieldset input{
+    border: none;
+    height: 90%;
+    width: 99.5%;
+}
+
+
+@media (max-width: 600px) {
+    .AddPost{
+        width: 100%;
+    }
+  }
+  

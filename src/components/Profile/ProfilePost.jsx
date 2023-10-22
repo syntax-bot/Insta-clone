@@ -1,4 +1,5 @@
-import "./Post.css";
+import "./ProfilePost.css";
+import React from "react";
 
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,11 +15,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CommentIcon from "@mui/icons-material/Comment";
 import { useState } from "react";
 
-export default function Post({
-  showComments,
-  setShowComments,
-  editable = false,
-}) {
+export default function ProfilePost({ editing, setEditing }) {
   const [addComment, setAddComment] = useState(false);
   let addCommentClass;
   if (addComment) {
@@ -26,24 +23,21 @@ export default function Post({
   } else {
     addCommentClass = "hide_addComment";
   }
-  let action;
-  if (editable) {
-    action = (
-      <IconButton aria-label="settings">
-        <MoreVertIcon />
-      </IconButton>
-    );
-  }
+
   return (
-    <div className="Post">
+    <div className="Profile_Post">
       <div className="Post_Head">
         <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              R
-            </Avatar>
+          action={
+            <IconButton
+              aria-label="settings"
+              onClick={() => {
+                setEditing(!editing);
+              }}
+            >
+              <MoreVertIcon />
+            </IconButton>
           }
-          action={action}
           title="Shrimp and Chorizo Paella"
           subheader="September 14, 2016"
         />
@@ -89,16 +83,6 @@ export default function Post({
           <div>
             <button>~ ADD Comment</button>
           </div>
-        </div>
-        <div>
-          <button
-            className="comment_Button"
-            onClick={() => {
-              setShowComments(!showComments);
-            }}
-          >
-            {showComments ? "Hide comments" : "View all comments"}
-          </button>
         </div>
       </div>
     </div>
