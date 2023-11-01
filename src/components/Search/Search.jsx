@@ -1,17 +1,35 @@
-import { useState } from "react";
+import {  useState } from "react";
 import "./Search.css";
 import { placeholders } from "../../constants/searchconstants";
 import SearchResult from "./SearchResult";
+import SearchProfile from "./SearchProfile";
+
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
-  return (
-    <div className="Search">
-      <SearchArea searchValue={searchValue} setSearchValue={setSearchValue} />
-      <div className="searchResult">
-        <SearchResult searchValue={searchValue} setSearchValue={setSearchValue} />
+  const [checkProfile, setCheckProfile] = useState(false);
+
+  
+
+  let content;
+  if (!checkProfile) {
+    content = (
+      <div className="Search">
+        <SearchArea searchValue={searchValue} setSearchValue={setSearchValue} />
+        <div className="searchResult">
+          <SearchResult
+            setCheckProfile={setCheckProfile}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    content = (
+      <SearchProfile user={checkProfile} setClearCheck={setCheckProfile}/>
+    );
+  }
+  return content;
 }
 
 function SearchArea({ searchValue, setSearchValue }) {
@@ -30,15 +48,17 @@ function SearchArea({ searchValue, setSearchValue }) {
         type="text"
         value={searchValue}
         onChange={(e) => {
-          setSearchValue((e.target.value).trimStart());
+          setSearchValue(e.target.value.trimStart());
         }}
         placeholder={placeholders[pointer]}
       />
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
+          setSearchValue('')
         }}
       >
-        Search
+        Clear
       </button>
     </div>
   );

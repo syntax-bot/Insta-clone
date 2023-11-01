@@ -1,25 +1,29 @@
-.AddPost{
-    width: 85%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.Create {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.AddPost fieldset{
-    width: 80%;
-    height: 10%;
+.Create div {
+  width: 80%;
+  height:30% ;
 }
-.AddPost fieldset input{
-    border: none;
-    height: 90%;
-    width: 99.5%;
+.Create .addStory fieldset{
+    height: 50%;
+} 
+.Create div button {
+  float: right;
 }
+.Create div fieldset textarea {
+  width: 100%;
+  height: 100%;
+  border:none;
 
-
+}
 @media (max-width: 600px) {
-    .AddPost{
-        width: 100%;
-    }
+  .Create {
+    width: 100%;
   }
-  
+}

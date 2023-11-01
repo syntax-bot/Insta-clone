@@ -1,48 +1,74 @@
-.Stories{
-    
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 0.5px solid rgb(94, 94, 94);
+.Stories {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgb(94, 94, 94);
+  width: 100%;
+}
+.story {
+  position: fixed;
+  width: 81%;
+  backdrop-filter: blur(200px);
+  z-index: 1;
+  height: 80%;
+  overflow: scroll;
+}
+
+#storytext{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Stories h5{
+  animation: in-out 10s forwards;
+  background-color:grey;
+  overflow: hidden;
+  height: 2px;
+}
+
+@keyframes in-out {
+  0% {
+    width: 0;
+  }
+  100% {
     width: 100%;
-
-}
-.story{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    z-index: 1;
-    backdrop-filter:blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.story_hide{
-    display: none;
-}
-.story .clear_btn{
-    position: fixed;
-    top:0;
-    background-color: rgb(193, 113, 8);
+  }
 }
 
-.Stories_stack{
-    overflow-x: scroll;
+.story::-webkit-scrollbar {
+  width: 0px;
+}
+.story_hide {
+  display: none;
+}
+.clear_btn {
+  position: fixed;
+  right: 0;
+  z-index: 1000;
+}
+
+.Stories_stack {
+  overflow-x: scroll;
 }
 
 .Stories_stack::-webkit-scrollbar {
-    
-    height: 0.2em
+  height: 0.2em;
 }
 
 .Stories_stack::-webkit-scrollbar-button {
-    background:grey
+  background: grey;
 }
 .Stories_stack::-webkit-scrollbar-track-piece {
-    background:transparent
+  background: transparent;
 }
 
 .Stories_stack::-webkit-scrollbar-thumb {
-    background:grey;
+  background: grey;
+}
+
+@media (max-width: 600px) {
+  .story {
+    width: 100%;
+  }
 }

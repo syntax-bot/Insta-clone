@@ -7,9 +7,14 @@
     border-right: 1px solid rgb(50, 50, 50);
     width: 15%;
     min-width: fit-content;
+    background-color:rgb(172, 172, 172)
 }
-
-
+.navIconText{
+    color: black;
+}
+.active button,.active span{
+    color:rgb(101, 115, 131);
+}
 
 @media (max-width: 600px){
     .logo{

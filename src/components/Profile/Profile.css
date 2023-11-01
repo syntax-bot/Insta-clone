@@ -15,11 +15,23 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100%;
+    padding-top: 10%;
+    
+    overflow-y: scroll;
 }
+
 .Profile_photo{
     grid-column: 1/2;
     grid-row: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Profile_photo img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 
@@ -61,6 +73,11 @@
     min-width:33.3%; 
     border: 1px solid black;
     cursor: pointer;
+    display: flex;
+}
+
+.post_review img{
+    width: 100%;
 }
 
 .clear_btn_Profile{
@@ -78,7 +95,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
@@ -95,15 +112,47 @@
     width: 80%;
     height: 50%;
 }
+.profileSetting_btn{
+    position: absolute;
+    top:2%;
+    right:2%;
+}
+.setting{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.setting div {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.setting div textarea{
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (max-width: 600px){
     .Profile{
         width: 100%;
-        height: 100%;
+        height: 90%;
+
     }
     .Profile_photo{
         grid-column: 1/3;
         grid-row: 1/2; 
+    }
+
+    .Profile_photo img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
     }
     
     .Profile_stats{
@@ -125,12 +174,15 @@
         display: flex;
         flex-direction: column;
         flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
     }
     
     
     .post_review{
         height: 41%;
         min-width:48%;
+        max-width: 50%;
         border: 1px solid black;
         cursor: pointer;
     }
@@ -138,23 +190,33 @@
         width: 100%;
         flex-direction: column;
     }
-    .Profile_Po{
-        width: 100% !important;
-        height: 70% !important
+    .Profile_Po_mob{
+        width: 100% !important; 
+        height:90% !important;
+        overflow: scroll;
+
+        
     }
-    .Profile_comments{
-        width: auto;
-    }
+    
 
     .clear_btn_Profile{
         top:5%;
         right:1%;
     }
     .editPostForm{
-        justify-content:flex-start;
+        height: 50%;
+        width: 100%;
+        justify-content:space-evenly;
         
     }
-    
+    .setting{
+        width: 100%;
+    }
 
+    .Profile_comments{
+        height: fit-content;
+        width: 100%;
+        padding-bottom: 10%;
+    }
     
 }

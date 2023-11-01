@@ -1,0 +1,13 @@
+.searchProfileReview{
+    width: 85%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.searchProfileReview .clear_btn{
+    position: absolute;
+    right:0;
+}
+
+
+
